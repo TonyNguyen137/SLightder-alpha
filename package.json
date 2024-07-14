@@ -1,0 +1,26 @@
+{
+  "name": "slightder-alpha",
+  "version": "0.1.0",
+  "description": "An ultra-lightweight, free and open source slider for websites, designed to enhance user experience with smooth transitions and customizable features.",
+  "main": "webpack.config.js",
+  "scripts": {
+    "start": "webpack-dev-server --env mode=development --open",
+    "build": "webpack --env mode=production"
+  },
+  "author": "Tony Nguyen",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "html-loader": "^5.0.0",
+    "html-webpack-plugin": "^5.6.0",
+    "mini-css-extract-plugin": "^2.9.0",
+    "sass": "^1.77.6",
+    "sass-loader": "^14.2.1",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4",
+    "webpack-merge": "^5.10.0",
+    "swiper": "^11.1.4"
+  }
+}

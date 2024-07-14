@@ -1,0 +1,43 @@
+@charset 'utf-8';
+@use '../abstract/functions' as *;
+@use '../abstract/mixins' as *;
+@use '../abstract/variables' as *;
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: px-to-rem(18);
+  line-height: 1.4;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+button,
+input,
+textarea {
+  font-size: inherit;
+  color: inherit;
+  font-weight: inherit;
+}
+
+ul {
+  padding-left: 15px;
+}

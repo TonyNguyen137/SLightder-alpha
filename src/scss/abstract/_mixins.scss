@@ -1,0 +1,36 @@
+$breakpoints: (
+  'sm': (
+    min-width: px-to-rem(576),
+  ),
+  'md': (
+    min-width: px-to-rem(768),
+  ),
+  'lg': (
+    min-width: px-to-rem(992),
+  ),
+  'xl': (
+    min-width: px-to-rem(1200),
+  ),
+  'xxl': (
+    min-width: px-to-rem(1400),
+  ),
+  '3xl': (
+    min-width: px-to-rem(1700),
+  ),
+);
+
+@mixin mq($name) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $name) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
